@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "html_control", "html_control.vcproj", "{60A2D8EF-0BF0-4FB2-BC8C-7FB98EB132C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60A2D8EF-0BF0-4FB2-BC8C-7FB98EB132C2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{60A2D8EF-0BF0-4FB2-BC8C-7FB98EB132C2}.Debug|Win32.Build.0 = Debug|Win32
+		{60A2D8EF-0BF0-4FB2-BC8C-7FB98EB132C2}.Release|Win32.ActiveCfg = Release|Win32
+		{60A2D8EF-0BF0-4FB2-BC8C-7FB98EB132C2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

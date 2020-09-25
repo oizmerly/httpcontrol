@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="MSThemeCompatible" content="yes" />
+<script src="JS/HtmlControl.js"></script>
+<script>
+// init window
+external.SetTitle("html test");
+external.Show(300, 200);    
+</script>
+<style>
+body {
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    border: 1px solid green;
+}
+div.resize-top {	
+	position: absolute; 	
+	height: 2px; 
+	width: 100%;	
+	font-size: 0; 
+	top: 0; 
+	left: 0; 
+	right: 0;
+	z-index: 1;	
+	cursor: s-resize;
+}
+div.resize-bottom {
+	position: absolute; 	
+	height: 2px; 
+	width: 100%;	
+	font-size: 0; 
+	bottom: 0; 
+	left: 0; 
+	right: 0;
+	z-index: 1;	
+	cursor: s-resize;
+}
+div.resize-left {
+	position: absolute; 
+	width: 2px; 
+	height: 100%;
+	font-size: 0; 
+	top: 0; 
+	left: 0; 
+	bottom: 0;
+	z-index: 1;
+	cursor: e-resize;
+}
+div.resize-right {
+	position: absolute; 
+	width: 2px; 
+	height: 100%;
+	font-size: 0; 
+	top: 0; 
+	right: 0; 
+	bottom: 0;
+	z-index: 1;
+	cursor: e-resize;
+}
+div.resize-top-left {
+	position: absolute; 
+	width: 10px;
+	height: 10px; 
+	font-size: 0; 
+	top: 0;
+	left: 0px;	
+	z-index: 2;
+	cursor: se-resize;
+}
+div.resize-top-right {
+	position: absolute; 
+	width: 10px;
+	height: 10px; 
+	font-size: 0; 
+	top: 0;
+	right: 0px;	
+	z-index: 2;
+	cursor: ne-resize;
+}
+div.resize-bottom-left {
+	position: absolute; 
+	width: 10px;
+	height: 10px; 
+	font-size: 1px; 
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	margin-left: 0px; 
+	cursor: ne-resize;
+}
+div.resize-bottom-right {
+	position: absolute; 
+	width: 10px;
+	height: 10px; 
+	font-size: 1px; 
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	margin-left: 0px; 
+	cursor: se-resize;
+}
+div.titlebar {
+    height: 24px;
+	z-index: 0;
+	cursor: default;
+	background: gray;
+}
+div.titlebar div.title {
+	position: absolute;
+	top: 6px;
+	left: 20px;	
+	color: white;
+    font-family: verdana;
+    font-size: 13px;
+    font-weight: bold;
+}
+div.titlebar div.buttons {
+	position: absolute;
+	top: 6px;
+	right: 10px;
+}
+div.titlebar div.buttons a {
+	color: white;
+	text-decoration: none;
+    font-family: verdana;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: default;
+}
+div.titlebar div.buttons a:hover {
+	color: red;
+}
+div.content {
+	margin: 2px 4px 4px 4px;
+	padding: 5px;	
+	color: white;		
+}
+</style>
+</head>
+<body oncontextmenu="external.ShowContextMenu();return false;" 
+      onselectstart="return false">
+<div class="resize-top" onmousedown="external.ResizeWindow(HTTOP)"></div>
+<div class="resize-bottom" onmousedown="external.ResizeWindow(HTBOTTOM)"></div>
+<div class="resize-left" onmousedown="external.ResizeWindow(HTLEFT)"></div>
+<div class="resize-right" onmousedown="external.ResizeWindow(HTRIGHT)"></div>
+<div class="resize-top-left" onmousedown="external.ResizeWindow(HTTOPLEFT)"></div>
+<div class="resize-top-right" onmousedown="external.ResizeWindow(HTTOPRIGHT)"></div>
+<div class="resize-bottom-left" onmousedown="external.ResizeWindow(HTBOTTOMLEFT)"></div>
+<div class="resize-bottom-right" onmousedown="external.ResizeWindow(HTBOTTOMRIGHT)"></div>
+<div class="titlebar" onmousedown="external.DragWindow()">
+    <div class="title">Title Bar</div>  
+    <div class="buttons">
+	    <a href="javascript:external.MinimizeWindow()">_</a>
+		<a href="javascript:external.ToggleMaximizeNormalWindow()">=</a>
+		<a href="javascript:external.Close()">x</a>
+	</div>
+</div>
+<div class="content">
+	<button onclick="external.Close(0x1234)">exit</button>
+	<button onclick="external.Foo()">foo</button>
+	<br />
+	<a href="http://google.com">google</a>
+	<div id="dbg"></div>	
+</div>
+</body>
+</html>
+
+<script>
+
+</script>
+
+
